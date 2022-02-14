@@ -1,0 +1,112 @@
+
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --lightGray: hsl(212, 45%, 89%);
+    --grayishBlue: hsl(220, 15%, 55%);
+    --darkBlue: hsl(218, 44%, 22%);
+    font-family: 'Outfit', sans-serif;
+    
+    font-size: 15px;
+    background-color: var(--lightGray);
+
+}
+
+body{
+    display: grid;
+    grid-template-rows: auto;
+    row-gap: 50px;
+    justify-items: center;
+    justify-content: center;
+    
+}
+@media (max-Width: 1440px) {
+
+    .card-container {
+        display: grid;
+
+        background-color: var(--white);
+        max-width: fit-content;
+        /* border: solid red 1px; */
+        border-radius: 5%;
+        box-shadow: var(--lightGray) 0px 3px 15px 1px;
+    }
+
+    .card {
+        /* border: solid red 1px; */
+        margin: 20px 20px 20px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 350px;
+    }
+
+    .card img {
+        max-width: 100%;
+        border-radius: 5%;
+    }
+
+    .card .card-title {
+        margin: 40px 0px 10px 0px;
+        font-size: 20px;
+        max-width: 75%;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .card .card-description {
+        font-weight: 400;
+        color: var(--grayishBlue);
+        font-size: 15px;
+        max-width: 75%;
+        text-align: center;
+    }
+
+}
+
+
+@media (max-Width: 375px) {
+            
+    .card-container {
+        display: grid;
+        margin: 10vh auto 10vh auto;
+        background-color: var(--white);
+        max-width: fit-content;
+        /* border: solid red 1px; */
+        border-radius: 5%;
+        box-shadow: var(--lightGray) 0px 3px 15px 1px;
+    }
+
+    .card {
+        /* border: solid red 1px; */
+        margin: 15px 15px 15px 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 75vw;
+    }
+
+    .card img {
+        max-width: 100%;
+        border-radius: 5%;
+    }
+
+    .card .card-title {
+        margin: 30px 0px 10px 0px;
+        font-size: 19px;
+        max-width: 95%;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .card .card-description {
+        font-weight: 400;
+        color: var(--grayishBlue);
+        font-size: 15px;
+        max-width: 95%;
+        text-align: center;
+    }
+
+}
+
+}
