@@ -20,7 +20,8 @@ body{
     justify-content: center;
     
 }
-@media (max-Width: 1440px) {
+
+@media (min-Width: 375px) {
 
     .card-container {
         display: grid;
