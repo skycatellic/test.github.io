@@ -1,14 +1,16 @@
 
 
 :root {
+    --softBlue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --veryDarkBlueBg: hsl(217, 54%, 11%);
+    --veryDarkBlueCard: hsl(216, 50%, 16%);
+    --veryDarkBlueLine: hsl(215, 32%, 27%);
     --white: hsl(0, 0%, 100%);
-    --lightGray: hsl(212, 45%, 89%);
-    --grayishBlue: hsl(220, 15%, 55%);
-    --darkBlue: hsl(218, 44%, 22%);
     font-family: 'Outfit', sans-serif;
     
-    font-size: 15px;
-    background-color: var(--lightGray);
+    font-size: 18px;
+    background-color: var(--veryDarkBlueBg);
 
 }
 
@@ -26,11 +28,12 @@ body{
     .card-container {
         display: grid;
 
-        background-color: var(--white);
         max-width: fit-content;
         /* border: solid red 1px; */
-        border-radius: 5%;
+        border-radius: 30px;
         box-shadow: var(--lightGray) 0px 3px 15px 1px;
+
+        background-color: var(--veryDarkBlueCard); 
     }
 
     .card {
@@ -39,30 +42,95 @@ body{
         display: flex;
         flex-direction: column;
         align-items: center;
-        max-width: 350px;
+        max-width: 400px;   
     }
-
-    .card img {
+    .card-container .card img {
         max-width: 100%;
+        margin: 0px 0px 20px 0px;
         border-radius: 5%;
     }
 
-    .card .card-title {
-        margin: 40px 0px 10px 0px;
-        font-size: 25px;
-        max-width: 95%;
-        font-weight: 700;
-        text-align: center;
+    .card-info {
+        border: solid red 1px;
+        display:grid;
+        grid-template-areas: 
+        "title title title title"
+        "description description description description" 
+        "priceSVG price expSVG expiration"
+        "author author author author";
+        row-gap: 10px;
+        justify-content: center;
+        align-items: center;
+
     }
 
-    .card .card-description {
-        font-weight: 400;
-        color: var(--grayishBlue);
-        font-size: 15px;
-        max-width: 95%;
-        text-align: center;
+    .nft-title {
+        border: solid red 1px;
+        grid-area: title;
+        margin: 5px 10px;
+        color: var(--white);
     }
 
+    .nft-description {
+        border: solid red 1px;
+        grid-area: description;
+        margin: 0px 10px;
+        color: var(--softBlue);
+    }
+
+    .priceSVG {
+        border: solid red 1px;
+        grid-area: priceSVG;
+        margin: 0px 10px;
+        place-self: start flex-start;
+    }
+
+    .nft-price {
+        border: solid red 1px;
+        grid-area: price;
+        margin: 0px 10px;
+        color: var(--cyan);
+        place-self: start flex-start;
+    }
+
+    .expSVG {
+        border: solid red 1px;
+        grid-area: expSVG;
+        margin: 0px 10px;
+    }
+
+    .nft-expiration {
+        border: solid red 1px;
+        grid-area: expiration;
+        margin: 0px 10px;
+        color: var(--softBlue);
+        
+    }
+    
+    .nft-author {
+        grid-area: author;
+        border: solid red 1px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .nft-author img{
+        border: solid red 1px;
+        transform: scale(50%);
+        place-self: center center;
+        margin: 0px 10px;
+        
+    }
+
+    .nft-author p {
+        border: solid red 1px;
+        max-height: auto;
+        place-self: center center;
+        margin: 0px 10px;
+        color: var(--softBlue);
+    }
+
+    
 }
 
 
