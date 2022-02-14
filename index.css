@@ -49,8 +49,8 @@ body{
 
     .card .card-title {
         margin: 40px 0px 10px 0px;
-        font-size: 20px;
-        max-width: 75%;
+        font-size: 25px;
+        max-width: 95%;
         font-weight: 700;
         text-align: center;
     }
@@ -59,7 +59,7 @@ body{
         font-weight: 400;
         color: var(--grayishBlue);
         font-size: 15px;
-        max-width: 75%;
+        max-width: 95%;
         text-align: center;
     }
 
